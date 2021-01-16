@@ -1,2 +1,2 @@
 # music-website
- My personal website showcase myself as a musical artist
+ My personal website showcasing myself as a musical artist
