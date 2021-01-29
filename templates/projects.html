@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 id="project-page-title">Coding Projects <small>made by kieran</small></h1>
+    {% for i in range(projects|length) %}
+    <section id="{{projects[i]['Name']}}" class="{{project_classes[i % 2]}} project-section">
+      <h2>{{projects[i]['Name']}}</h2>
+      <div class="project-div">
+        <h3 class="project-header">Description:</h3>
+        <p>{{projects[i]['Description']}}</p>
+        <h3  class="project-header">Technology Used:</h3>
+        <p>{{projects[i]['Tech']}}</p>
+        <h3 class="project-header">Challenges:</h3>
+        <p>{{projects[i]['Challenges']}}</p>
+        <h3  class="project-header">Media</h3>
+        <div>{{projects[i]['Media'] | safe}}</div>
+        <a class="github-link" href="{{projects[i]['Github']}}" target="_blank">View on Github</a>
+      </div>
+
+    </section>
+    {% endfor %}
+{% endblock %}

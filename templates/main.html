@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Kieran McAuliffe Music</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-  </head>
-  <body>
+{% extends "base.html" %}
+
+{% block content %}
     <nav id="navbar">
       <ul id="nav-list">
         <li><a href="#about" class="nav-link">About</a></li>
@@ -79,37 +74,12 @@
     <section id="works">
       <h2>Works List</h2>
       <div id="works-list">
-        <h3>Orchestral</h3>
-        <p>"Misty Step" (9") for orchestra. 2020</p>
-        <p>"State of Repair" (6") for chamber orchestra. 2020</p>
-
-        <h3>4+ Players</h3>
-        <p>"The Fresh Pond in the Old Field" (10") for saxophone quartet. 2020</p>
-        <p>"After the Carnival" (8") for flute choir. 2020</p>
-        <p>"Pathology/Personality" (7") for string quartet and electric guitar. 2020</p>
-        <p>"Sonnet XIX" (4") for clarinet, two violins and cello. 2020</p>
-        <p>"Cascades" (8") for string quartet. 2018</p>
-
-        <h3>2-3 Players</h3>
-        <p>"Feet Among Snakes" (4") for flute and piano. 2020</p>
-        <p>"Sonata for Me and You" (10") for flute and piano. 2019</p>
-        <p>"Dance Now" (6") for flute, guitar and piano. 2019</p>
-        <p>"No Confidence" (7") for tenor saxophone and clarinet. 2019. Revised for trumpet and clarinet. 2020</p>
-        <p>"The Unknowing Detective" (11") for electric guitar and percussion. 2018</p>
-
-        <h3>Solo</h3>
-        <p>"Obstacle Play" (10") for guitar and electronics. 2020</p>
-        <p>"Hush" (3") for piano. 2020</p>
-        <p>"Silver in Veins" (3") for piano. 2019</p>
-
-        <h3>Songs</h3>
-        <p>"The Cruel Mother" (6") for mezzo-soprano, baritone and piano. 2020</p>
-
-        <h3>Jazz Ensemble</h3>
-        <p>"AP is OK" (9") for 9 musicians. 2017</p>
-        <p>"Beneath the Garden" (9") for 9 musicians. 2017</p>
-        <p>"Try Again" (6") for 9 musicians. 2017</p>
-        <p>"AIphone" (9") for 9 musicians. 2017</p>
+        {% for cat in piece_categories.keys() %}
+          <h3>{{cat}}</h3>
+          {% for piece in piece_categories[cat] %}
+          <p>{{piece}}</p>
+          {% endfor %}
+        {% endfor %}
       </div>
 
     </section>
@@ -132,9 +102,4 @@
     </section>
 
     <!-- END CONTACT SECTION -->
-    <!-- START FOOTER -->
-
-    <footer><p>&#169;2021 B. Kieran McAuliffe</p>
-      <a href="#welcome">Back to top</a></footer>
-  </body>
-</html>
+{% endblock %}

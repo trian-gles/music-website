@@ -8,6 +8,7 @@
 :root {
   --link-hover: #ff8c8c;
   --color-gray: #1c1b16;
+  --color-light-gray: #b8b8b8;
 }
 
 html {
@@ -210,7 +211,7 @@ h1 {
   }
 }
 
-h3 {
+#works-list h3 {
   text-indent: -2em;
   margin: .6em 0;
 }
@@ -265,4 +266,51 @@ footer a {
 
 footer a:hover {
   color: var(--link-hover);
+}
+
+/* PROJECT PORTFOLIO */
+#project-page-title {
+  width: 100%;
+}
+
+small {
+  font-size: .4em;
+}
+
+.project-section {
+  padding-top: 3em;
+  padding-bottom: 1.4em;
+}
+
+.github-link {
+  text-decoration: none;
+  color: white;
+  background: var(--color-gray);
+  padding: .4em;
+  display: block;
+  margin: 1em auto 1em auto;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.github-link:hover {
+  color: var(--link-hover);
+}
+
+.project-header {
+  margin: 1em 0;
+}
+
+.project-div {
+  width: 80%;
+  margin: auto;
+}
+
+.project-even {
+  padding-top: .8em;
+  background: var(--color-light-gray);
+}
+
+.project-odd {
+  padding-top: .8em;
 }
