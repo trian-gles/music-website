@@ -35,7 +35,7 @@ PROJECTS = {
     "Description": "A Discord bot for playing simple card games",
     "Tech": "Built with Javascript(discord.js, node.js)",
     "Challenges": "Implementing a variety of RegEx tricks",
-    "Media": "",
+    "Media": "<img src='/static/media/card_bot_screenshots.png' height=400 width=auto></img>",
     "Github": "https://github.com/trian-gles/discord-card-bot"
     }
     }
