@@ -26,7 +26,8 @@ PROJECTS = {
     "Description": "A musical experiment involving shuffling performers around Discord voice channels",
     "Tech": "Built with Python(discord.py), HTML and CSS",
     "Challenges": "Creating a smooth flowing musical performance using code.",
-    "Media": "<img src='/static/media/discord_score.png' height=400 width=auto></img>",
+    "Media": '''<img src='/static/media/discord_score.png' height=400 width=auto></img>\
+    <iframe width="auto" height="400" src="https://www.youtube.com/embed/w7eKsRarPjY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>''',
     "Github": "https://github.com/trian-gles/discord-piece"
     },
 "discord_card":
@@ -37,5 +38,13 @@ PROJECTS = {
     "Challenges": "Implementing a variety of RegEx tricks",
     "Media": "<img src='/static/media/card_bot_screenshots.png' height=400 width=auto></img>",
     "Github": "https://github.com/trian-gles/discord-card-bot"
+    },
+"todo":
+    {
+    "Name": "Todo List",
+    "Description": "A desktop app for jotting tasks and checking them off when finished",
+    "Tech": "Built with Python(tkinter), also uses SQLite3",
+    "Media": "<img src='/static/media/todo.png' height=400 width=auto></img>",
+    "Github": "https://github.com/trian-gles/todo"
     }
     }
